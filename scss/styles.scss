@@ -1,0 +1,246 @@
+@import '_reset';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+$h1-color: #000000;
+$subtitle-color: #454545;
+$paragraph-color: #333333;
+$orange-font: #f2984a;
+$light-color: #bdbdbd;
+$white-font: #ffffff;
+$check-color: #828282;
+$headers-font: 'Playfair Display', serif;
+$paragraph-font: 'Montserrat', sans-serif;
+
+@mixin gridme ($col, $fit) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat($col, $fit);
+    grid-gap: .7em;
+}
+
+.Body {
+    width: 90vw;
+    margin: 40px auto;
+    font-size: 16px;
+    @media (min-width: 1000px) {
+        margin: 55px auto;
+        width: 70vw;
+    }
+}
+/* --------------------------    HEADER    ------------------------- */
+.H1 {
+    font-family: $headers-font;
+    font-weight: 700;
+    color: $h1-color;
+    font-size: 1.5em;
+    margin-bottom: .7em;
+    @media (min-width: 1000px) {
+        font-size: 3em;
+    }
+}
+.Abstract {
+    @include gridme(2,auto);
+}
+.SixPoints {
+    padding-top: 5px;
+}
+.AbstractText {
+    font-family: $paragraph-font;
+    font-weight: 500;
+    color: $subtitle-color;
+    font-size: .75em;
+    font-style: italic;
+    line-height: 1.3em;
+    @media (min-width: 1000px) {
+        font-size: .9em;
+        width: 65%;
+    }
+}
+.HeaderPicture {
+    margin: 35px 0;
+}
+/* ---------------------------    MAIN    -------------------------- */
+
+/* ------------   Aside   ------------ */
+.Main {
+    display: grid;
+    grid-template-areas: "times"
+                        "recipe";
+    grid-gap: .5em;
+    @media (min-width: 1000px) {
+        grid-template-areas: "recipe times"
+                            "recipe times";
+    }
+}
+.Times {
+    grid-area: times;
+    font-family: $paragraph-font;
+    display: grid;
+    grid-template-areas: "yields yields yields"
+                        "prep cook total";
+    grid-row-gap: 10px;
+    @media (min-width: 1000px) {
+        grid-template-areas: "yields"
+                            "prep"
+                            "cook"
+                            "total";
+        border-radius: 5px;
+        margin-top: 25px;
+        padding: 60px 40px;
+        box-shadow: $light-color 0px 5px 10px 0px;
+        height: 350px;
+    }
+}
+.TimesElement {
+    @include gridme(2,max-content);
+    display: grid;
+    align-items: center;
+    line-height: .6em;
+    @media (min-width: 1000px) {
+        line-height: 1em;
+    }
+    &:nth-of-type(2) {
+        grid-area: prep;
+    }
+    &:nth-of-type(3) {
+        grid-area: cook;
+    }
+    &:nth-of-type(4) {
+        grid-area: total;
+    }
+    &--isRow {
+        grid-area: yields;
+        @include gridme(2,max-content);
+        align-items: center;
+        line-height: .6em;
+        @media (min-width: 1000px) {
+            line-height: 1em;
+        }
+    }
+}
+.TimesElementIcon {
+    width: 1em;
+    @media (min-width: 1000px) {
+        width: 1.3em;
+    }
+}
+.TimesElementTitle {
+    font-weight: 700;
+    font-size: .5em;
+    text-transform: uppercase;
+    color: $light-color;
+    @media (min-width: 1000px) {
+        font-size: .65em;
+    }
+}
+.TimesElementQ {
+    font-size: .65em;
+    color: $paragraph-color;
+    font-weight: 500;
+    @media (min-width: 100px) {
+        font-size: .9em;
+    }
+    &--isServings {
+        color: $orange-font;
+        font-size: .65em;
+        font-weight: 500;
+        @media (min-width: 100px) {
+            font-size: .9em;
+        }
+    }
+}
+/* ------------   Rest   ------------ */
+.Recipe {
+    grid-area: recipe;
+    margin: 20px 0;
+    @media (min-width: 1000px) {
+        width: 90%;
+    }
+}
+.IngredientsPart,
+.IntructionsPart {
+    margin-bottom: 25px;
+}
+.H2,
+.H3 {
+    font-family: $headers-font;
+    font-weight: 700;
+    color: $paragraph-color;
+    margin-bottom: 1em;
+}
+.H2 {
+    font-size: 1.5em;
+    @media (min-width: 1000px) {
+        font-size: 1.5em;
+    }
+}
+.H3 {
+    font-size: 1.1em;
+    @media (min-width: 1000px) {
+        font-size: 1.5em;
+    }
+}
+.H4 {
+    font-family: $headers-font;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1em;
+    color: $paragraph-color;
+    margin-bottom: 1em;
+    @media (min-width: 1000px) {
+        font-size: 1.1em;
+    }
+}
+.IngredientsElement {
+    @include gridme(2,auto);
+    justify-content: start;
+    & p {
+        font-family: $paragraph-font;
+        font-weight: 400;
+        font-size: .8em;
+        color: $paragraph-color;
+        margin-bottom: .4em;
+        & span {
+            font-weight: 700;
+        }
+        @media (min-width: 1000px) {
+            font-size: 1em;
+        }
+    }
+}
+.Square {
+    border: 1px solid $check-color;
+    border-radius: 3px;
+    width: 1.2em;
+    height: 1.2em;
+}
+.InstructionsElement {
+    @include gridme(2,auto);
+    justify-content: start;
+    margin-bottom: 20px;
+    & p {
+        font-family: $paragraph-font;
+        font-weight: 400;
+        font-size: 1em;
+        color: $h1-color;
+        margin-bottom: .4em;
+        & span {
+            font-weight: 700;
+        }
+    }
+}
+.NumberedSquare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $headers-font;
+    font-weight: 500;
+    font-size: 1.2em;
+    border-radius: 4px;
+    background-color: $orange-font;
+    color: $white-font;
+    width: 1.3em;
+    height: 1.3em;
+    padding-bottom: 5px;
+}
