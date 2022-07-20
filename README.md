@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://https://interior-consultant-page-devchallenges.netlify.app/" target="_blank">
+    <a href="https://recipe-page-devchallenges-4.netlify.app/" target="_blank">
       Demo
     </a>
     <span> | </span>
@@ -16,7 +16,7 @@
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb" target="_blank">
+    <a href="https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht" target="_blank">
       Challenge
     </a>
   </h3>
@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](https://raw.githubusercontent.com/sergio-atreides/Challenge-03---interior-consultant/main/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/sergio-atreides/Challenge-04---recipe-page/main/screenshot.png)
 
 Hi! This is my attempt with the first DevChallenge.io challenge: a 404 page.
 
@@ -48,7 +48,7 @@ I have a long background developing desktop apps with .NET but I'm a noob develo
 
 ## Features
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht) was to build an application to complete the given user stories.
 
 
 ## Contact
