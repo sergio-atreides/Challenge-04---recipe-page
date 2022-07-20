@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Interior consultant Challenge</h1>
+<h1 align="center">Recipe page Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/sergio-atreides/Challenge-03---interior-consultant" target="_blank">
+    <a href="https://github.com/sergio-atreides/Challenge-04---recipe-page" target="_blank">
       Solution
     </a>
     <span> | </span>

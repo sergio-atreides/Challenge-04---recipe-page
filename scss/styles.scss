@@ -21,7 +21,7 @@ $paragraph-font: 'Montserrat', sans-serif;
 
 .Body {
     width: 90vw;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
     font-size: 16px;
     @media (min-width: 1000px) {
         margin: 55px auto;
@@ -243,4 +243,18 @@ $paragraph-font: 'Montserrat', sans-serif;
     width: 1.3em;
     height: 1.3em;
     padding-bottom: 5px;
+}
+.Footer {
+    width: 100%;
+    &-p {
+        text-align: center;
+        font-family: $paragraph-font;
+        color: $light-color;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &-a {
+        text-decoration: underline;
+        font-weight: bold;
+    }
 }
